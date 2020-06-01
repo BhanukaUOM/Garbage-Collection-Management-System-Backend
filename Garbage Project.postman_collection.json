@@ -1,0 +1,1949 @@
+{
+	"info": {
+		"_postman_id": "4cf04c88-7572-4628-bb52-ea415cd9d232",
+		"name": "Garbage Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": " XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "name1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "customer@garbage.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "abc123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0774536111",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/auth/signup",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/auth/signup/activate/rSbyKJsa2I2ZiDDz3rEEu3WjGaLSNAVtkBun3lZ6gmIvgvQpR7jwhjHa2XGq",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup",
+								"activate",
+								"rSbyKJsa2I2ZiDDz3rEEu3WjGaLSNAVtkBun3lZ6gmIvgvQpR7jwhjHa2XGq"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": " XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"customer10@garbage.com\",\n\t\"password\" : \"abc123\",\n\t\"remember_me\" : true\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk1ODgxOGFhZTZiNWFmNzJhYjYyMzIzMDBhMzEwNDFlOTczMGQzYzkxMzE2OTI2Yjk2MzY0Yzc1MTU5YmI3YTI4MDJhMWFiMjIzYWU4YjkwIn0.eyJhdWQiOiIxIiwianRpIjoiOTU4ODE4YWFlNmI1YWY3MmFiNjIzMjMwMGEzMTA0MWU5NzMwZDNjOTEzMTY5MjZiOTYzNjRjNzUxNTliYjdhMjgwMmExYWIyMjNhZThiOTAiLCJpYXQiOjE1NDI4NzU5NjUsIm5iZiI6MTU0Mjg3NTk2NSwiZXhwIjoxNTc0NDExOTY0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FxI4QwY8q3pQv3n-zv1kfABUnOgL-L1EaHfDxh9VYa6LWUx47XJ8Jn-87hzp9vjUbGKKvwz8Z-vQ24kPaFuGSJGCkMfgkgbVbjRr2Lls79mpCj1KreXZZKo_-0B4RGd9P2fMzbPGmr5yinZXPtsf3G3QORNxNRv7T2e47UEcllmM42kmTYsQVGHW77QMSEmiZWVRjR65BbQqDcMO5-E2bX68_d5kFQR9OGaAa6JC1QFMxMSnrNsuJOGr1x1BZgj_Z5g7QnuOauc_X9cKJ-xkxDBAQAVeDJfpA7h8fsmeWd4JkQMPba7kK436DZP4D_qMxnmmirvL42zLOgMVEBm3PNsMs9prvRWHOkyNQa0caK-YjY6WQJGYqWImdoa9DNf-JXgSko6Zo6cY-NthkYxsQXRxqsrscTaQWhsx0N0-RUdyVqNkC89bkmHzGgv9SQmFZg3bFMtHkHoXEuJl_jXTBtft_XYfG9cKfeVVHHv1y9yGphdTJ_t3p5DDIuDwZaSi-tNqjJHy8zR_Hc7QkwS6OP1Cm0KICSb0I5XiXtYKk64LWKHhgmJL3n03-fH8bfwyxHpwRR7Ubh87CHwdbAm-Dwnn6-4c-_8JkZ8A2KvOr-1xcJw8wRrUH1pu19A-KEyXG8qrvo60YQV9Ka5_c-6omFqH8j_6EVlWwtIcf4VV3jk",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/auth/logout",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logged User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjVmNjA4ODJkNTA3YWU2NDcwYjA5NDY3ZTUwZGUxMTllMWZlY2VjMWEzM2NhZjRhYmIxNDJmMGQ4ZWZlYTM1NjhlNzM2NTM5OTBkNTkyMmNmIn0.eyJhdWQiOiIxIiwianRpIjoiNWY2MDg4MmQ1MDdhZTY0NzBiMDk0NjdlNTBkZTExOWUxZmVjZWMxYTMzY2FmNGFiYjE0MmYwZDhlZmVhMzU2OGU3MzY1Mzk5MGQ1OTIyY2YiLCJpYXQiOjE1NDc3NDA1NjIsIm5iZiI6MTU0Nzc0MDU2MiwiZXhwIjoxNTc5Mjc2NTYyLCJzdWIiOiI1MSIsInNjb3BlcyI6W119.QHyFSudY-FSXATRE6KyeWCj9_mmEFpG7ouXti80N_WWuR8jpLyygKlk02wWgAQzfhJRh3smFTez2raY_g6dDlvuRLRO7NfEkq4naGeQoxFiVgMCCDMBRjCd3hUJW00LYZx4ATjxCuf-URNXu9zpOuN4lQt23zswW7OhbVRydiJoKMA25dR8T7Un9SCBbay3xUxCvAJbmI3wRdfYK-Y-v6GIxLzHHje67TsTaf-8cMcWV30kPcOwLckUf0X60iOPEcS3MsKZPkT6bwEffWzopSLJ97LdGs9rzG3z2wB0M2VLQSv4n_RFjVfYzyXwCdvwEKeNKe91J5Mo8YJOzEmXs-AS__5GyVdYJ-Wj2iI8QNdSCry0I_lTBwCxlL7RMgaomDmOeg0zbD658u-iWSw7GueLkYJLgb5CM5nj-5GmpoMwDjQC-gi3paPcHsI84GvPWay0Wz1AGrjT2ER9XlYakCxmptYTp01fHJt1F4fcOq155eU6KUPGzKv3RQQrKoaMfEc4baTOXIH6sY2QDc-4yo1Sl0MYMY15QOUjFMa-bP7fQtS2KzHiAyZfCyhBOzDb66gq6MiXj9gXFzmmwcCzQLSWoz-mnBabl2oODIDvc5c2FbAFSLTV7hAYBJrxhRHA9dFP-ymC-BNa5CwFPAqjRwAj7_hovIxUtLSwvd0ptPqE",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/auth/user",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Password Reset",
+			"item": [
+				{
+					"name": "Password Reset Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": " application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": " XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"bm65556@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/password/create",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"password",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Password Reset Email by token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": " XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/password/find/dIrqE8PgucpGFRbnWBP0nKz0d8zEXOpAvxiBaUIqyf2XwYIQHZbj6nuridBe",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"password",
+								"find",
+								"dIrqE8PgucpGFRbnWBP0nKz0d8zEXOpAvxiBaUIqyf2XwYIQHZbj6nuridBe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password Reset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": " XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"bm65556@gmail.com\",\n\t\"password\" : \"abc123\",\n\t\"password_confirmation\" : \"abc123\",\n\t\"token\" : \"oUFVX7AYB7veCNgTXOYjjbLOfz0CdRaAUMXEBVYYwrGX9JW6b8AUntQA3B43\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/password/reset",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"password",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFiMGQ5NzkwMmExYWZmNGVjYzAwZjRlYTRhMDRkMTFlZDA1YmQwZjJlZjgyNzgzNTRjNmVjNDgwZjM3ZjFjMjRhZjVmMTk0NTRhYzY4Y2NkIn0.eyJhdWQiOiIxIiwianRpIjoiYWIwZDk3OTAyYTFhZmY0ZWNjMDBmNGVhNGEwNGQxMWVkMDViZDBmMmVmODI3ODM1NGM2ZWM0ODBmMzdmMWMyNGFmNWYxOTQ1NGFjNjhjY2QiLCJpYXQiOjE1NTMxNDQxODgsIm5iZiI6MTU1MzE0NDE4OCwiZXhwIjoxNTg0NzY2NTg4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hUpxUS5polya2t6NGgNe-Y-jEnq09vGoVTE9GX7hrtRMTiLpo8IoS155DDC9OaUfKtwqpNI-Uakf5bCjKjCAEtmonnwN8xjdOuXC_d8xMzCctMJiYfZSyKrkrqcJM3altdNzODXV1FLHYEYS61mmkDPJSFXOiuGJebYqVxtbiHbISg51qh2Td-iMrJbKdlG2v8ksdJhc8peiXXBXo9XNZQIbIn7d9tfueEhzMMRKAYIDHe60YNOpvpP6hgeXU8M4ELnPe1ndm3ZIssm_hFqkb8-9lE8J8R-2-pHnMqvpfQ5x0TuR75i4rs0MMx5T5BgNgl9nC84llF4mSGSEuAuq-njy2eKFNueZUBbdOty4GwNjpywMZ2RUxHCvm_4ibzQ3UPQrxOgqJ0MXQLLqPuXvZ-tpdlLnAUgeNN23pe5lZ9H02M2S3RmlVfuCG04CLkxrWc013s6MD_QJxdGlW988afeyIogZyyv3YparYVlE8UBhXQnR43eIZe9X17OIvaWqp-pn3EKUCUKGXx6t90vua-i5GnDwv9C2PScLqHb1gKZQ4A6J3KbybgqJxm7barzRfWiA6wrpZYwKKmsYxkS01gufygVfWsV31JiX3ouyauZIDTInof863CE_-3vlaXgUqHOlH1RH_5JPGy5nwGOV8PEPYiuegnbtuovBwX0JY5k",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users?search=a&page=1&sort=name&order=desc&role=Customer",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "name"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								},
+								{
+									"key": "role",
+									"value": "Customer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pause",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlNDFhZThlNmEyZTlhMGIzOTk1OGNiNTkzMDNjZTIzOWFlYjM0NzJiODRhZDJlZmI4ZmMyMDFmMGZiZWI4NmI4NjUyOWRlOTg0OTY4MTEzIn0.eyJhdWQiOiIxIiwianRpIjoiY2U0MWFlOGU2YTJlOWEwYjM5OTU4Y2I1OTMwM2NlMjM5YWViMzQ3MmI4NGFkMmVmYjhmYzIwMWYwZmJlYjg2Yjg2NTI5ZGU5ODQ5NjgxMTMiLCJpYXQiOjE1NDI5Nzc2NDAsIm5iZiI6MTU0Mjk3NzY0MCwiZXhwIjoxNTc0NTEzNjQwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.ebjQ9alGKDzMfckDrjgvnEeTBZpRnNBOxRoz-DFg-j9AcK6g8H0Bto5-cBbAb_VLyVhvWTWR4pMSzCXYPR7TbBjYYOpvCbeTZsIVmnzES22vISBG1EjlA_IzCgdZpk8Gz_xWlFUZdIjTkbDSs_4wF9LoJRUof_8kZsQbA-1C973mEuKPsPZE_HRcuGknxiKGVMAks_erf6PPV6tJrZloAcgAQlRubJgDIhftToyOOszKVcJyl3RJM6Ej33EuIQYm3jlF303YlsvzNZjy7eS9JUReKt4wGUBccFkq-0NhOH95lfnLhlq42TUDzbPYXV9XNrkZC3ggydMz_C2v-tTYRATd3BcPWU4nxBZKAJPEYGds4kP7I-7kBamy2cvssxdDkverZLVccIYXc1yp3BlW6NB267L2mU43Yvzy1OCGuClEgYqaD0ZTz6sQQN0iecAEsGGfhspkzsOdUmxdFRV4cDQFirsGmwiVolT9yd1urUfQgIcuCaVTsmdCtxBrpSVlC_zoVq5ry_i9HVpWIAGuJ8elczytZGzzlMaCTLZzcSmDI2s3cX6ZFn6dN57JDuLhR22k-bhGK3YL2OX-eREXtZtoyDRZhFfhqSULOakEuCipMRUI0qcpd17dL10cXiQU0aTx0TNqcg9G4RyfJrgqKk5s3jShdgpa88E7Dz5ixCs",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : \"1\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users/pause",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"pause"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlNDFhZThlNmEyZTlhMGIzOTk1OGNiNTkzMDNjZTIzOWFlYjM0NzJiODRhZDJlZmI4ZmMyMDFmMGZiZWI4NmI4NjUyOWRlOTg0OTY4MTEzIn0.eyJhdWQiOiIxIiwianRpIjoiY2U0MWFlOGU2YTJlOWEwYjM5OTU4Y2I1OTMwM2NlMjM5YWViMzQ3MmI4NGFkMmVmYjhmYzIwMWYwZmJlYjg2Yjg2NTI5ZGU5ODQ5NjgxMTMiLCJpYXQiOjE1NDI5Nzc2NDAsIm5iZiI6MTU0Mjk3NzY0MCwiZXhwIjoxNTc0NTEzNjQwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.ebjQ9alGKDzMfckDrjgvnEeTBZpRnNBOxRoz-DFg-j9AcK6g8H0Bto5-cBbAb_VLyVhvWTWR4pMSzCXYPR7TbBjYYOpvCbeTZsIVmnzES22vISBG1EjlA_IzCgdZpk8Gz_xWlFUZdIjTkbDSs_4wF9LoJRUof_8kZsQbA-1C973mEuKPsPZE_HRcuGknxiKGVMAks_erf6PPV6tJrZloAcgAQlRubJgDIhftToyOOszKVcJyl3RJM6Ej33EuIQYm3jlF303YlsvzNZjy7eS9JUReKt4wGUBccFkq-0NhOH95lfnLhlq42TUDzbPYXV9XNrkZC3ggydMz_C2v-tTYRATd3BcPWU4nxBZKAJPEYGds4kP7I-7kBamy2cvssxdDkverZLVccIYXc1yp3BlW6NB267L2mU43Yvzy1OCGuClEgYqaD0ZTz6sQQN0iecAEsGGfhspkzsOdUmxdFRV4cDQFirsGmwiVolT9yd1urUfQgIcuCaVTsmdCtxBrpSVlC_zoVq5ry_i9HVpWIAGuJ8elczytZGzzlMaCTLZzcSmDI2s3cX6ZFn6dN57JDuLhR22k-bhGK3YL2OX-eREXtZtoyDRZhFfhqSULOakEuCipMRUI0qcpd17dL10cXiQU0aTx0TNqcg9G4RyfJrgqKk5s3jShdgpa88E7Dz5ixCs",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users/4",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYyNTliOTc2OWMwZjRkMmE5M2E3NmQ1ZmM1ZTNmMTRmNTBkZWRkNjk0N2QxMGE2MGYwNzM1ODM1Y2E4ZGY1MjY5MzgwMjU1ZjU0NTQxMTdmIn0.eyJhdWQiOiIxIiwianRpIjoiZjI1OWI5NzY5YzBmNGQyYTkzYTc2ZDVmYzVlM2YxNGY1MGRlZGQ2OTQ3ZDEwYTYwZjA3MzU4MzVjYThkZjUyNjkzODAyNTVmNTQ1NDExN2YiLCJpYXQiOjE1NTM0MzY2NTEsIm5iZiI6MTU1MzQzNjY1MSwiZXhwIjoxNTg1MDU5MDUxLCJzdWIiOiI1OCIsInNjb3BlcyI6W119.Y9Fw_rAyBz-dKKAN5lnedt9sCe3aACP9R3eTyT6c1_kTEzI6dgx8CaMHA-3CZcKrg7Djb3oLCk3YAdDc6BCMrzTGM7SrPfOXOsLtTGuJC_WK5v_uhLO_qLfD2eHCiOvcIqslx5D9F_2CA7yzORVU6Ek8eQNVXiXhFSyGpYLMlV_88jN8UKkWOoiYrg2NV0VS3QSXKF_gEqKdZXk2nqZ5ycBop__YzjcysCBwQ5ds4QMWEz0DTj9S4RLkl7sulht0PnZHjsTzux7vW54e7s7WUHDx44XAPswS8K6IEyuKEgfBTDzRSWJAWAZTgLo9qRy4fRtEpwx-CdJCYBEj9muTRKKBQ6X-E50UtI_QT3YnJ78fguGkIpIVX9fni3U5YnyyIQ3CC0fJksEnG83saAqflEUz9pZMtSaW_pi-wRlNWTVnCU2ffnQaTJf8STQDeqhojO-CgwMlLxSfCEundyotaLD_7C9r5O6MFEeqdc7O13m0Z0uHBIbjx2XRCux2pQFkXYBsExStVblSSCXxZJ6F0k6sySl5WZGc2MUQeNjt_u_rIML6mXFdPNqRB8oPHEnRZhte-jgNT5-DR4kMsGilujqT6dqwf-Zv94U4ITORymdfJnfWHB_f5SVZUdcdaLwdsVldBHhNQMLC7f4VtzoMaFCicHbkJuHyRJCCq6mQ1jE",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Admin Editeddd",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "phone",
+									"value": "123411",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users/59",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View User Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzMzU2OTRkODUwOTcyODgzNmVhZjlmMDUwNGFlYjRiN2VkN2I1MDNkZTZjMmZjMDkzYjczYmFlMDU0YTJjNmU1MmQ0NWM4YzY5ODdlNGQ1In0.eyJhdWQiOiIzIiwianRpIjoiZjMzNTY5NGQ4NTA5NzI4ODM2ZWFmOWYwNTA0YWViNGI3ZWQ3YjUwM2RlNmMyZmMwOTNiNzNiYWUwNTRhMmM2ZTUyZDQ1YzhjNjk4N2U0ZDUiLCJpYXQiOjE1NDgwOTM0NzMsIm5iZiI6MTU0ODA5MzQ3MywiZXhwIjoxNTc5NjI5NDczLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rRTbRTrjHKfdE-AkA14vuWIQmEPHagGbCLR_JqgjMAEgWdKIKS2g6otH55q2aFkaVjGmgFxksZi4OTseqWBI7v1f-9slA4hGRRkD6jg7-MfbXBhrsnfxw37POCVCyyrA6cKJLtdDXjm_C5maAzpwonKqK58am_G4_PaNlAsSN57boUDifz8wtIXHbD0J7U3MqFFow0dvzpFfXeddz6a1nOOL4Tla6jfrlY0TpH24LhUlyHrjsM7NBF2z6KxnT6H8jRe6MXG_WK8eWtKmDf0sHbxuFDKvC9EVwPVKzQJq_KGOev2WRdjq_G6RSvsDC--0fAR4RHf84fwdGsF6R0EHFJoa8KJqeUmvL-6Rw9h5ZQGiyLsCDhlpuSfDn4CLVhRNkVw2VLmfEIJO866puMSsiB35cK11x6p3_zfXPS-nMQoBUZHWMtGs2TdpKyDRASMbLOQdCGOIuIKk0DxPOYbwsafwrCR_rVM0wzYJNKrCmZTTDazliLT0xXFpf4e0w_yV9TmnMIsZRvhcvWuowslI47KEOEMdYAPi_wVuHy0E1qCvXf35-rajkbOzMkB1Y4yWUzb6wtWsQdCxbNo0v1eHZSe-wQD-eO6BgKFYOAiGtp-RiNEN5KSVjvL7bbL917Js-YJPG52GWXn4xCSC5G-e_5o4oGJispQKNaRkreyfDMQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFiMGQ5NzkwMmExYWZmNGVjYzAwZjRlYTRhMDRkMTFlZDA1YmQwZjJlZjgyNzgzNTRjNmVjNDgwZjM3ZjFjMjRhZjVmMTk0NTRhYzY4Y2NkIn0.eyJhdWQiOiIxIiwianRpIjoiYWIwZDk3OTAyYTFhZmY0ZWNjMDBmNGVhNGEwNGQxMWVkMDViZDBmMmVmODI3ODM1NGM2ZWM0ODBmMzdmMWMyNGFmNWYxOTQ1NGFjNjhjY2QiLCJpYXQiOjE1NTMxNDQxODgsIm5iZiI6MTU1MzE0NDE4OCwiZXhwIjoxNTg0NzY2NTg4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hUpxUS5polya2t6NGgNe-Y-jEnq09vGoVTE9GX7hrtRMTiLpo8IoS155DDC9OaUfKtwqpNI-Uakf5bCjKjCAEtmonnwN8xjdOuXC_d8xMzCctMJiYfZSyKrkrqcJM3altdNzODXV1FLHYEYS61mmkDPJSFXOiuGJebYqVxtbiHbISg51qh2Td-iMrJbKdlG2v8ksdJhc8peiXXBXo9XNZQIbIn7d9tfueEhzMMRKAYIDHe60YNOpvpP6hgeXU8M4ELnPe1ndm3ZIssm_hFqkb8-9lE8J8R-2-pHnMqvpfQ5x0TuR75i4rs0MMx5T5BgNgl9nC84llF4mSGSEuAuq-njy2eKFNueZUBbdOty4GwNjpywMZ2RUxHCvm_4ibzQ3UPQrxOgqJ0MXQLLqPuXvZ-tpdlLnAUgeNN23pe5lZ9H02M2S3RmlVfuCG04CLkxrWc013s6MD_QJxdGlW988afeyIogZyyv3YparYVlE8UBhXQnR43eIZe9X17OIvaWqp-pn3EKUCUKGXx6t90vua-i5GnDwv9C2PScLqHb1gKZQ4A6J3KbybgqJxm7barzRfWiA6wrpZYwKKmsYxkS01gufygVfWsV31JiX3ouyauZIDTInof863CE_-3vlaXgUqHOlH1RH_5JPGy5nwGOV8PEPYiuegnbtuovBwX0JY5k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "name1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "collector3@garbage.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "abc123",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123, Kohuwala",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "Collector",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/users",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/roles?search=keyword&page=2",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "keyword"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/roles/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Role",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"test\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/roles/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Role Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/roles/2",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"roles",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJiOGE0Y2M1NTQxYWI3MjBjNDE0Y2NiYjY3YjNkNmNkNTc5NTY0NjZiYzBlZjFmOWEyZjMwNTAzZmNjNjA1OGI2Yjg1YWU0ODU4ZGU1YTRhIn0.eyJhdWQiOiIzIiwianRpIjoiYmI4YTRjYzU1NDFhYjcyMGM0MTRjY2JiNjdiM2Q2Y2Q1Nzk1NjQ2NmJjMGVmMWY5YTJmMzA1MDNmY2M2MDU4YjZiODVhZTQ4NThkZTVhNGEiLCJpYXQiOjE1NDc5MjI1MjgsIm5iZiI6MTU0NzkyMjUyOCwiZXhwIjoxNTc5NDU4NTI4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.q2w7uGUDwttFesuo3V8BOSHnq96eegxX4JJaYMX8YUz9DqJvLPg4ErhXZW5VKoRGRNetK6e0E9zYQbpldLWaL8eZJb9vpENUQDgUAqEElgip1pPsYTA_XP--vtmP9G8U8Cmx_VeKOkVwuaF-MOlJ-pSgrjeGSyluuciFnTZdEn38aTQ0i7J_08Sh4pa2_VEHGbC99nrw_z99dhhxFx1d1uSd5kd_ZFLjz6oU4BeB0Jaffb_cbgWDy_fIjCvSqSwY_EKsuzkXaxB4UWTAJJiC0DlqEoT3f_QixEjjcBNygiZmQbim2uvVG3lPTERZ3jOYbrxvC_t5wMfF6gN2Vs9yCDROPwWok8SE16QiymBEUliIrTY9IFV7KVMS0WeRzxiJLQdHR7Yau0WvNmskUVsvCbjpn-iOvKtESJldmMrX1N1LXxpV6SX3B3rsNkP_Ye0J2Jxx7w1J42OmRz4B9UEClbdO7l-vntYART-hXxCCWx4BVCyLSuhK0u2JFHO6lp6Qi0e1skIF1Saptd31h44F818mSK9WsOtKito4ayCkl1DK-notrs7O06S9pXhbIOLc82ELQYT4TNCxaGk5gDJzwRdnXZcghBbcrCRGXF_hg0VQzyEyagKPn3X3vBrJZQCgGJaZYajjN6oO9md43ek9bjDHQ5fp6aU-tP2gmZ7QIwM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Admin\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/roles",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2534cd90-519d-45f5-92ea-cbaf3825df06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "df1e3b86-1df1-496b-b4be-e6ef971bdda9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "PointsTypes",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/points",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/points/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Glass\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/points/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/points/2",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"points",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Glass\",\n\t\"point\" : 10\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/points",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"points"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2534cd90-519d-45f5-92ea-cbaf3825df06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "df1e3b86-1df1-496b-b4be-e6ef971bdda9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Points",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/point",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"point"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Points User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/point/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"point",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LeaderBoard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/point/leaderboard",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"point",
+								"leaderboard"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2534cd90-519d-45f5-92ea-cbaf3825df06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "df1e3b86-1df1-496b-b4be-e6ef971bdda9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Requests",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjMzk3OTFjNDNkM2ZhM2UzZGI1ZTJiNjllYzc3NTVkZDhiYWRjMjViMzhjMGM2OTJhMWRlY2U0ODIwMWQ5MTk2MDI4NTNmOWRmNzg1OWQyIn0.eyJhdWQiOiIxIiwianRpIjoiYWMzOTc5MWM0M2QzZmEzZTNkYjVlMmI2OWVjNzc1NWRkOGJhZGMyNWIzOGMwYzY5MmExZGVjZTQ4MjAxZDkxOTYwMjg1M2Y5ZGY3ODU5ZDIiLCJpYXQiOjE1NTMwOTA2NzAsIm5iZiI6MTU1MzA5MDY3MCwiZXhwIjoxNTg0NzEzMDcwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.wcYL4fwcIs2PjLwSgqai2O7jk99K9o4S0qN3lCf41FBvGRkNOoK8qQaTRYLYHCn4xAlpTZgK0ldAbUzNMsvT_keTfQdV7goW9qnOS_E2CW-zilTTxVwM0s0IZxh5fXw7Wxb4Vhfok2RVB7vWfLaoiZfl588xxxtlj6jpr6OI0pgxh_4mw9jGnfQsBAk_iXsS8djO-ubq1sBojYjxwkXcKy2V9XljUzWGcc_xKpZzOb08Oj4FirPwQKWp30PrNn5V4WyhK6Plog8uPDEqOS7mO_tDJmjcF-Ip8XzcxBM3r-xdmQZAxS9-9XxLbOEJhhRzdkCM-kVlz8TNS7mMmA2ETGYIdnU4KiC4ho70FMkDJLh8ccAYHGXH6v4KtU-nC0rOWqgbFLLOeflbsi43pbX_70t5P6t0F11KgNH8hu8XFO3AubE6oXzIQZ7hKz6yuj9dYJkoGDwu0PBIJHse2OcAkhz4UGGfjLhQgMJAMYxuueXykSdUAbjDAFgCiOph-VmPCC6A35bNd3a9YIRv-DDy1ANfBRPBtgFlH6nz4wPL9ZKqclb26YhrBuMXLYD2Z5B1t8QYjjS5oIwEz2LLv39kNXoWaRGhCSIgOTt8VGly5tqJ-_7MwbtoDoOsah2LNvKk2pJVXITFNzOCroreYW4vjLwySfhE6C7w5nVw_0TWGlM",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All request of Current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjMzk3OTFjNDNkM2ZhM2UzZGI1ZTJiNjllYzc3NTVkZDhiYWRjMjViMzhjMGM2OTJhMWRlY2U0ODIwMWQ5MTk2MDI4NTNmOWRmNzg1OWQyIn0.eyJhdWQiOiIxIiwianRpIjoiYWMzOTc5MWM0M2QzZmEzZTNkYjVlMmI2OWVjNzc1NWRkOGJhZGMyNWIzOGMwYzY5MmExZGVjZTQ4MjAxZDkxOTYwMjg1M2Y5ZGY3ODU5ZDIiLCJpYXQiOjE1NTMwOTA2NzAsIm5iZiI6MTU1MzA5MDY3MCwiZXhwIjoxNTg0NzEzMDcwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.wcYL4fwcIs2PjLwSgqai2O7jk99K9o4S0qN3lCf41FBvGRkNOoK8qQaTRYLYHCn4xAlpTZgK0ldAbUzNMsvT_keTfQdV7goW9qnOS_E2CW-zilTTxVwM0s0IZxh5fXw7Wxb4Vhfok2RVB7vWfLaoiZfl588xxxtlj6jpr6OI0pgxh_4mw9jGnfQsBAk_iXsS8djO-ubq1sBojYjxwkXcKy2V9XljUzWGcc_xKpZzOb08Oj4FirPwQKWp30PrNn5V4WyhK6Plog8uPDEqOS7mO_tDJmjcF-Ip8XzcxBM3r-xdmQZAxS9-9XxLbOEJhhRzdkCM-kVlz8TNS7mMmA2ETGYIdnU4KiC4ho70FMkDJLh8ccAYHGXH6v4KtU-nC0rOWqgbFLLOeflbsi43pbX_70t5P6t0F11KgNH8hu8XFO3AubE6oXzIQZ7hKz6yuj9dYJkoGDwu0PBIJHse2OcAkhz4UGGfjLhQgMJAMYxuueXykSdUAbjDAFgCiOph-VmPCC6A35bNd3a9YIRv-DDy1ANfBRPBtgFlH6nz4wPL9ZKqclb26YhrBuMXLYD2Z5B1t8QYjjS5oIwEz2LLv39kNXoWaRGhCSIgOTt8VGly5tqJ-_7MwbtoDoOsah2LNvKk2pJVXITFNzOCroreYW4vjLwySfhE6C7w5nVw_0TWGlM"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/currentUser",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"currentUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkOWYwMGUzZmFiZWY1ZWVkYWU4NDQ2ZjdkYjVjMDNmZmNkYzE3MGEzMjQxOGJjOTE4ZTRkZGE4ZjJlMmIxYzM0OTY3NDRhMWMxYjFlN2FjIn0.eyJhdWQiOiIxIiwianRpIjoiMmQ5ZjAwZTNmYWJlZjVlZWRhZTg0NDZmN2RiNWMwM2ZmY2RjMTcwYTMyNDE4YmM5MThlNGRkYThmMmUyYjFjMzQ5Njc0NGExYzFiMWU3YWMiLCJpYXQiOjE1NDMwNTYyMDgsIm5iZiI6MTU0MzA1NjIwOCwiZXhwIjoxNTc0NTkyMjA4LCJzdWIiOiI1MiIsInNjb3BlcyI6W119.jBxto_rSsp9Lgv0_t1hcSZ7W3XMq-l2a_geSjHW9u5O7HKLc9v1tJP0CFZwPhEfqPi_fUX-qDsXQs7BXgCSShyR1W00CWdvFGy3-Zh0exLlKAru6QkLXj2K2dmITLftvc7JfbPDqQMWEZ8HHFUiko5d0QJryiLtPuonB3iWKrHbbKWlGUWAmw-2y6e9mKK7Ze5L33PzZ5m66FkUZ4Wup_X7CetA7rbH2NG0GIvAWP9zUur0Ggcy9cvXmolGv5tssc9jop4pjchhd7N8gDfBZ4RaLW1he_OvU4624gBmunhI9HamAkVacCJt-cbQjwBQ9sSLLL432WJ54q7EXUrjdM3htermISP7ILOYxMS11qEpeHuABIiv3kJf9szExa99ZQVJxNw0Aki1rHew53eTtPVizeC0PSFtXnrBx7avaK08yyyny7G-VF-gDuRbyiVF1ECKh-174YjF882HkU7BWBA_l7HKvNMDiiJdi9R8rRZeqlmGp_VeKd3vzdqiWVWTi7P3OTgFdyT5KzbBQbjk9ObehnvfDS0nYovZMBQMwqqs8N_gPzrhuT6tx9QD80F_7BdP166uykNDt_3Blqs8twvN35tN0u8pHFaCTZTH6g5_6AD3INVDpmz0lQTpWfOq2eu4YW_GAQWXmboS691mJ_8IdyAJ4NU_4cL_K6tfb1bk"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjMzk3OTFjNDNkM2ZhM2UzZGI1ZTJiNjllYzc3NTVkZDhiYWRjMjViMzhjMGM2OTJhMWRlY2U0ODIwMWQ5MTk2MDI4NTNmOWRmNzg1OWQyIn0.eyJhdWQiOiIxIiwianRpIjoiYWMzOTc5MWM0M2QzZmEzZTNkYjVlMmI2OWVjNzc1NWRkOGJhZGMyNWIzOGMwYzY5MmExZGVjZTQ4MjAxZDkxOTYwMjg1M2Y5ZGY3ODU5ZDIiLCJpYXQiOjE1NTMwOTA2NzAsIm5iZiI6MTU1MzA5MDY3MCwiZXhwIjoxNTg0NzEzMDcwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.wcYL4fwcIs2PjLwSgqai2O7jk99K9o4S0qN3lCf41FBvGRkNOoK8qQaTRYLYHCn4xAlpTZgK0ldAbUzNMsvT_keTfQdV7goW9qnOS_E2CW-zilTTxVwM0s0IZxh5fXw7Wxb4Vhfok2RVB7vWfLaoiZfl588xxxtlj6jpr6OI0pgxh_4mw9jGnfQsBAk_iXsS8djO-ubq1sBojYjxwkXcKy2V9XljUzWGcc_xKpZzOb08Oj4FirPwQKWp30PrNn5V4WyhK6Plog8uPDEqOS7mO_tDJmjcF-Ip8XzcxBM3r-xdmQZAxS9-9XxLbOEJhhRzdkCM-kVlz8TNS7mMmA2ETGYIdnU4KiC4ho70FMkDJLh8ccAYHGXH6v4KtU-nC0rOWqgbFLLOeflbsi43pbX_70t5P6t0F11KgNH8hu8XFO3AubE6oXzIQZ7hKz6yuj9dYJkoGDwu0PBIJHse2OcAkhz4UGGfjLhQgMJAMYxuueXykSdUAbjDAFgCiOph-VmPCC6A35bNd3a9YIRv-DDy1ANfBRPBtgFlH6nz4wPL9ZKqclb26YhrBuMXLYD2Z5B1t8QYjjS5oIwEz2LLv39kNXoWaRGhCSIgOTt8VGly5tqJ-_7MwbtoDoOsah2LNvKk2pJVXITFNzOCroreYW4vjLwySfhE6C7w5nVw_0TWGlM"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"locationLat\" : \"6.791\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjMzk3OTFjNDNkM2ZhM2UzZGI1ZTJiNjllYzc3NTVkZDhiYWRjMjViMzhjMGM2OTJhMWRlY2U0ODIwMWQ5MTk2MDI4NTNmOWRmNzg1OWQyIn0.eyJhdWQiOiIxIiwianRpIjoiYWMzOTc5MWM0M2QzZmEzZTNkYjVlMmI2OWVjNzc1NWRkOGJhZGMyNWIzOGMwYzY5MmExZGVjZTQ4MjAxZDkxOTYwMjg1M2Y5ZGY3ODU5ZDIiLCJpYXQiOjE1NTMwOTA2NzAsIm5iZiI6MTU1MzA5MDY3MCwiZXhwIjoxNTg0NzEzMDcwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.wcYL4fwcIs2PjLwSgqai2O7jk99K9o4S0qN3lCf41FBvGRkNOoK8qQaTRYLYHCn4xAlpTZgK0ldAbUzNMsvT_keTfQdV7goW9qnOS_E2CW-zilTTxVwM0s0IZxh5fXw7Wxb4Vhfok2RVB7vWfLaoiZfl588xxxtlj6jpr6OI0pgxh_4mw9jGnfQsBAk_iXsS8djO-ubq1sBojYjxwkXcKy2V9XljUzWGcc_xKpZzOb08Oj4FirPwQKWp30PrNn5V4WyhK6Plog8uPDEqOS7mO_tDJmjcF-Ip8XzcxBM3r-xdmQZAxS9-9XxLbOEJhhRzdkCM-kVlz8TNS7mMmA2ETGYIdnU4KiC4ho70FMkDJLh8ccAYHGXH6v4KtU-nC0rOWqgbFLLOeflbsi43pbX_70t5P6t0F11KgNH8hu8XFO3AubE6oXzIQZ7hKz6yuj9dYJkoGDwu0PBIJHse2OcAkhz4UGGfjLhQgMJAMYxuueXykSdUAbjDAFgCiOph-VmPCC6A35bNd3a9YIRv-DDy1ANfBRPBtgFlH6nz4wPL9ZKqclb26YhrBuMXLYD2Z5B1t8QYjjS5oIwEz2LLv39kNXoWaRGhCSIgOTt8VGly5tqJ-_7MwbtoDoOsah2LNvKk2pJVXITFNzOCroreYW4vjLwySfhE6C7w5nVw_0TWGlM"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/1",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU4NjdmYzgwNDk1ZmFkMGZiYjk0MDc2OWViYWY1MDFiOTE0YzFmMmZhYmNjMjQyMzE4NDIxNTFiMWRiMGEzOWE4MzA1YjY2MDkxZTRhNzAyIn0.eyJhdWQiOiIxIiwianRpIjoiNTg2N2ZjODA0OTVmYWQwZmJiOTQwNzY5ZWJhZjUwMWI5MTRjMWYyZmFiY2MyNDIzMTg0MjE1MWIxZGIwYTM5YTgzMDViNjYwOTFlNGE3MDIiLCJpYXQiOjE1NTEwMjU2MDUsIm5iZiI6MTU1MTAyNTYwNSwiZXhwIjoxNTgyNTYxNjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mh57wEbdiHmU6PajjbTQO-mF0-hR8N9s6PMftEtuwNjgW12ERJK8NRz1opDoJyBKTYLTnVdZBZ20-ywXfJZD3ancjGBdaOsDbiJC_QRJaL4wJzdlZ9e_ENaZ-MRmfgmv-AE7E8iV7QV1uEpDwaNpW_GtJsfloJJ8u54UKxm1BCUipmVHML8FK5fKH3EHLDYlYwPi9Mdi9mVszD8mq-Oi1qVgHkGyROVtnnT6TflkHtqKwlxQ-hUWi9hP53pOwa5MLD56i8-z2dGTAzOAErGFoJKSpiqqMchLaeuhrD-x14jn07mr_xQ0YaPrOlqs00-QVFIPny_Go9pxbu1Sz-qE5HNMWU_Cn-E44aPlDUMNyUMN77UCTIs2tui1_vf2j8gbkWokhFWFJ3hZR6zAT5WvKEeKDgyrvbm_QnjZi70scZo6bGt2zPReSDbyT8Za1Hk04GQ4wto0mM5OluNFXxMpPJu-abpuUuKpEdaVFaYL8I8Qt8hCE0-31PuSQLQt2bOmpLqgC_KdzIdAmAvDqzgV9xIh7ZaIOumjRVYi-BuN1eF8qsjXBwI8LbyCVgpnyFMUbDnU6RNtu6wJ1DZub4-A2gkgUIJSSxDGezLTkH9WDPbdPN0OmzxwvNNVkVSy-KixOoZVq7qa5UBzIZHiMF3rGNqlUJ9BfVPRcLo7mxSi_Uk",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\" : 1,\n\t\"locationLat\" : \"6.79102\",\n\t\"locationLon\" : \"79.9810\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRiY2U5YWYzNGExMzdmOWZhZGRhYzYxMDE3MTI1ZjY3ODA5OWE1OGM0N2IwYmVlNzdmNjU3ODMwN2U1M2NmODFhMDQ5YjkzNmM5OTEwYWEzIn0.eyJhdWQiOiIxIiwianRpIjoiZGJjZTlhZjM0YTEzN2Y5ZmFkZGFjNjEwMTcxMjVmNjc4MDk5YTU4YzQ3YjBiZWU3N2Y2NTc4MzA3ZTUzY2Y4MWEwNDliOTM2Yzk5MTBhYTMiLCJpYXQiOjE1NTMxNTA2NTUsIm5iZiI6MTU1MzE1MDY1NSwiZXhwIjoxNTg0NzczMDU1LCJzdWIiOiIyNSIsInNjb3BlcyI6W119.jr1tF_hZLI97Coh3dgBffA8g7ocdpPCgCcnIvQxnehgl4VK9yKn7VSEj_FD6BViNfEFr-ADcqrfbWkylsXj63CCSUgbPvqSQ9anh-GmfdfQkfE36160ACPSsjotJtJJuoRaYb8ZMqkLitr5JVLt1K2QPMNVw7E6XDLfwz__6gc9_mzLdH4gfwUWU2LevjkXkuw6kHNtqgjN2raRpnc7d7gupE9EuBH1d3Nc8GGgQz7X1myj0PEHdyzcYkRxkQ1Ni_ehhV3hRkrtqRLFEtMNvpzlhbX8XJlrMj21rkI8xQEa9R9WYpPBYBRZmtdsddSdhO7uozuFRmKiP9ocyCXtMe4T01DV_46JnaRO-P8ZmReXPKvHRLPC0QjgjwlGVacK14-Z6MD7suvY2K79tJnyYCwFJDESDffg2xKygGGIY-KB7MMDzVUH6LKjHDJXzb3sJs0dIBrXnAXBn-nPeaZvXlI_zFW6yqVwrgv8Gbeb9SDkKyH-ImY5I_z4Q3qS_X4hR1qzVy66GtA5KViI1XXgM9uQrZ9rc87DRxsQefAJU2wH-27kjB9qfPHsVkvGJfUEkkRdk_YFIEODt_iwyicwm8sB_521VixGwuFwtXcyewtTQV0pJS6r-1TFzsHOCKe6O2h5JQXry1HDcn7A7yHdNqzPOZy6Fa5d8eIZIyp_vlHg"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 1\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/approve",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm PickUP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRiY2U5YWYzNGExMzdmOWZhZGRhYzYxMDE3MTI1ZjY3ODA5OWE1OGM0N2IwYmVlNzdmNjU3ODMwN2U1M2NmODFhMDQ5YjkzNmM5OTEwYWEzIn0.eyJhdWQiOiIxIiwianRpIjoiZGJjZTlhZjM0YTEzN2Y5ZmFkZGFjNjEwMTcxMjVmNjc4MDk5YTU4YzQ3YjBiZWU3N2Y2NTc4MzA3ZTUzY2Y4MWEwNDliOTM2Yzk5MTBhYTMiLCJpYXQiOjE1NTMxNTA2NTUsIm5iZiI6MTU1MzE1MDY1NSwiZXhwIjoxNTg0NzczMDU1LCJzdWIiOiIyNSIsInNjb3BlcyI6W119.jr1tF_hZLI97Coh3dgBffA8g7ocdpPCgCcnIvQxnehgl4VK9yKn7VSEj_FD6BViNfEFr-ADcqrfbWkylsXj63CCSUgbPvqSQ9anh-GmfdfQkfE36160ACPSsjotJtJJuoRaYb8ZMqkLitr5JVLt1K2QPMNVw7E6XDLfwz__6gc9_mzLdH4gfwUWU2LevjkXkuw6kHNtqgjN2raRpnc7d7gupE9EuBH1d3Nc8GGgQz7X1myj0PEHdyzcYkRxkQ1Ni_ehhV3hRkrtqRLFEtMNvpzlhbX8XJlrMj21rkI8xQEa9R9WYpPBYBRZmtdsddSdhO7uozuFRmKiP9ocyCXtMe4T01DV_46JnaRO-P8ZmReXPKvHRLPC0QjgjwlGVacK14-Z6MD7suvY2K79tJnyYCwFJDESDffg2xKygGGIY-KB7MMDzVUH6LKjHDJXzb3sJs0dIBrXnAXBn-nPeaZvXlI_zFW6yqVwrgv8Gbeb9SDkKyH-ImY5I_z4Q3qS_X4hR1qzVy66GtA5KViI1XXgM9uQrZ9rc87DRxsQefAJU2wH-27kjB9qfPHsVkvGJfUEkkRdk_YFIEODt_iwyicwm8sB_521VixGwuFwtXcyewtTQV0pJS6r-1TFzsHOCKe6O2h5JQXry1HDcn7A7yHdNqzPOZy6Fa5d8eIZIyp_vlHg"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 24,\n\t\"1\" : \"2.79\",\n\t\"2\" : \"1.00\"\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/pickup",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"pickup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unapprovedRequests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRiY2U5YWYzNGExMzdmOWZhZGRhYzYxMDE3MTI1ZjY3ODA5OWE1OGM0N2IwYmVlNzdmNjU3ODMwN2U1M2NmODFhMDQ5YjkzNmM5OTEwYWEzIn0.eyJhdWQiOiIxIiwianRpIjoiZGJjZTlhZjM0YTEzN2Y5ZmFkZGFjNjEwMTcxMjVmNjc4MDk5YTU4YzQ3YjBiZWU3N2Y2NTc4MzA3ZTUzY2Y4MWEwNDliOTM2Yzk5MTBhYTMiLCJpYXQiOjE1NTMxNTA2NTUsIm5iZiI6MTU1MzE1MDY1NSwiZXhwIjoxNTg0NzczMDU1LCJzdWIiOiIyNSIsInNjb3BlcyI6W119.jr1tF_hZLI97Coh3dgBffA8g7ocdpPCgCcnIvQxnehgl4VK9yKn7VSEj_FD6BViNfEFr-ADcqrfbWkylsXj63CCSUgbPvqSQ9anh-GmfdfQkfE36160ACPSsjotJtJJuoRaYb8ZMqkLitr5JVLt1K2QPMNVw7E6XDLfwz__6gc9_mzLdH4gfwUWU2LevjkXkuw6kHNtqgjN2raRpnc7d7gupE9EuBH1d3Nc8GGgQz7X1myj0PEHdyzcYkRxkQ1Ni_ehhV3hRkrtqRLFEtMNvpzlhbX8XJlrMj21rkI8xQEa9R9WYpPBYBRZmtdsddSdhO7uozuFRmKiP9ocyCXtMe4T01DV_46JnaRO-P8ZmReXPKvHRLPC0QjgjwlGVacK14-Z6MD7suvY2K79tJnyYCwFJDESDffg2xKygGGIY-KB7MMDzVUH6LKjHDJXzb3sJs0dIBrXnAXBn-nPeaZvXlI_zFW6yqVwrgv8Gbeb9SDkKyH-ImY5I_z4Q3qS_X4hR1qzVy66GtA5KViI1XXgM9uQrZ9rc87DRxsQefAJU2wH-27kjB9qfPHsVkvGJfUEkkRdk_YFIEODt_iwyicwm8sB_521VixGwuFwtXcyewtTQV0pJS6r-1TFzsHOCKe6O2h5JQXry1HDcn7A7yHdNqzPOZy6Fa5d8eIZIyp_vlHg"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/requests/unapprovedRequests",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"requests",
+								"unapprovedRequests"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2534cd90-519d-45f5-92ea-cbaf3825df06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "df1e3b86-1df1-496b-b4be-e6ef971bdda9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Add Location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA4NTE0MTViZDllYzU1NTY2OWUzNGIxYWFlNjMwYzk2ZWYzNDkxMjlhNTdmZmQyM2UzYTg4ZWJmMzE4MjYxYjk5OTZmMmYxOWUxZjZlMTc4In0.eyJhdWQiOiIxIiwianRpIjoiMDg1MTQxNWJkOWVjNTU1NjY5ZTM0YjFhYWU2MzBjOTZlZjM0OTEyOWE1N2ZmZDIzZTNhODhlYmYzMTgyNjFiOTk5NmYyZjE5ZTFmNmUxNzgiLCJpYXQiOjE1NTMxNDQ2MTgsIm5iZiI6MTU1MzE0NDYxOCwiZXhwIjoxNTg0NzY3MDE4LCJzdWIiOiIyMiIsInNjb3BlcyI6W119.A5Fh1SsaVREOpnUfmigdNGn6gGJe6C5GQZXCRGkSXV_sw3yWFeWzwJaHjKiaKMTAxGhGnMOBAt-dAWOsjNxPghq0lIYETM9mpd0Fkcp2mfJM-hp4jz6GNlSkj_kFzklL8El7cy6uJlqRD5DFCsagrJ3wns-ott3XjgqIBwowRhWx3kosJeJJc7jw9VrVQK8Hfg-bgAhVyEp8Q-0aaj3RSfQzU6QDiCzxUUtp7LMF7PTRD04E5kV_75ptkbMS2baDlSzAJLLBqvGxJ6gvphUFSsizwr42NrJutGyp55r1khRy0ZyTECisyM8Sm2rlDLKfDJsQ6_sTvMkn7ZYYmbqwvMe9EW7R8DKHZUcxg7Q_BgnCfUyfabA4TfSLfrOGVVrGgVc1Wfs-XKhvEUYDLKXW15cy_ofRSJbUNMfdNODiKwSNKAun5Egbj42IJqtF71_AH7C6V6I0bUA7XqVKGXvDkdtwvUkPx_aUYYnNBnuJB-82gVweZcVt_2Jxk9k6v3h0pzTj0gj-OKOLieUOE_IEsZb1Cm6nAWQL_eoTz8-bsvBLbs65fw_JSdQansum3H9P3aVxEY9yfcv3Rj6A_oK4swDsxzXzJx1DZaipBOi_3GydXg7z-fkC9QZYybghcBtjqNfcDmn14ioSqkUrObJQPyvU-pO_bfvbRIOtU3Co5MM",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"latitude\": 38.785834,\r\n    \"longitude\": -122.406417,\r\n    \"timestamp\": 1548780668000\r\n}"
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/location",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA3NzU1ZTYyMWY2YWMyZmU2ZGQxMTBlNWUyNzdhOTg2NDEwMGY4ZTEzYjkyYjlkNzgwZTM4ZGJmMjNkZTMwYWNhYmNiZDgyZDNkNThmZTg0In0.eyJhdWQiOiIxIiwianRpIjoiMDc3NTVlNjIxZjZhYzJmZTZkZDExMGU1ZTI3N2E5ODY0MTAwZjhlMTNiOTJiOWQ3ODBlMzhkYmYyM2RlMzBhY2FiY2JkODJkM2Q1OGZlODQiLCJpYXQiOjE1NDMxNjU3MjEsIm5iZiI6MTU0MzE2NTcyMSwiZXhwIjoxNTc0NzAxNzIxLCJzdWIiOiI1MiIsInNjb3BlcyI6W119.Xr6qzkKE51IoT-xlizFND7J6vbFA01gTTqbk9L99AetGmtwtmolPZj9n537rUlZtC58VXKU2dQ9mGCs4sL5nfZt5pAgvMHy8x4htM5RGoGoPRtX3fHg-hTvpBg917lLrVZ-pPVyV3FrATkbPFOLIrDSqTFPnWRS6fTI94BQxqg98EbefxcHC2MxBJNussKh_-uSv9Mh21oZaNW0neB_1zY_H74JbtLL7PJhxmT5bZPtcNuzsWDkvOhYGOzY0fKe0QLW-sld3Tpff456P7sNxnMvuncWBsNiuLpTt1B8ZMgiAGdog9OQeQgkT6Wlpq6N6zHX5OakC7GtnL1nRNKg47g-t9TQDtg8PCFxqojQBQZMPc88qgHqNVPQy_N_dLu4imxKN7guQlS1dITDqU-PD69-tJPSwpz6vpGZVRPr-6weAyvAV3G7XQnIL0yApBCCgujDh18VOBFtYasXf6kvyBJ0WRtOIoU1AewO_EeRxeaObVCCk-Psp-bE0e8NMKfdYLgniFtVI7sJ3MxNlwV8BVlMRewvHzKlxOFxCmNlS9FQKepbjZ0lWJ_r6jAayVT18Ugy6RUeCfwAZ4QFCI6gR-3d3IE24Xv9-_s8xf-UaD-zoAub6J3P_62Eu3UDh95jvov9_IhGVrCe_EiNtSGjdECaqOEu5W7Ehoksw04Ld8JY",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/location/52",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"location",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location of Current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA4NTE0MTViZDllYzU1NTY2OWUzNGIxYWFlNjMwYzk2ZWYzNDkxMjlhNTdmZmQyM2UzYTg4ZWJmMzE4MjYxYjk5OTZmMmYxOWUxZjZlMTc4In0.eyJhdWQiOiIxIiwianRpIjoiMDg1MTQxNWJkOWVjNTU1NjY5ZTM0YjFhYWU2MzBjOTZlZjM0OTEyOWE1N2ZmZDIzZTNhODhlYmYzMTgyNjFiOTk5NmYyZjE5ZTFmNmUxNzgiLCJpYXQiOjE1NTMxNDQ2MTgsIm5iZiI6MTU1MzE0NDYxOCwiZXhwIjoxNTg0NzY3MDE4LCJzdWIiOiIyMiIsInNjb3BlcyI6W119.A5Fh1SsaVREOpnUfmigdNGn6gGJe6C5GQZXCRGkSXV_sw3yWFeWzwJaHjKiaKMTAxGhGnMOBAt-dAWOsjNxPghq0lIYETM9mpd0Fkcp2mfJM-hp4jz6GNlSkj_kFzklL8El7cy6uJlqRD5DFCsagrJ3wns-ott3XjgqIBwowRhWx3kosJeJJc7jw9VrVQK8Hfg-bgAhVyEp8Q-0aaj3RSfQzU6QDiCzxUUtp7LMF7PTRD04E5kV_75ptkbMS2baDlSzAJLLBqvGxJ6gvphUFSsizwr42NrJutGyp55r1khRy0ZyTECisyM8Sm2rlDLKfDJsQ6_sTvMkn7ZYYmbqwvMe9EW7R8DKHZUcxg7Q_BgnCfUyfabA4TfSLfrOGVVrGgVc1Wfs-XKhvEUYDLKXW15cy_ofRSJbUNMfdNODiKwSNKAun5Egbj42IJqtF71_AH7C6V6I0bUA7XqVKGXvDkdtwvUkPx_aUYYnNBnuJB-82gVweZcVt_2Jxk9k6v3h0pzTj0gj-OKOLieUOE_IEsZb1Cm6nAWQL_eoTz8-bsvBLbs65fw_JSdQansum3H9P3aVxEY9yfcv3Rj6A_oK4swDsxzXzJx1DZaipBOi_3GydXg7z-fkC9QZYybghcBtjqNfcDmn14ioSqkUrObJQPyvU-pO_bfvbRIOtU3Co5MM"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/location",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all locations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFiZjU3MjJjYTdlNTlhZjU4NzNjMmFlNjI2YjhlNjdjYTZlN2NkNzI3ODA3ZTM1MWZlMTdkMWFkNzBjMTZkMTcwODQ0ODY4NjE4NGU2YWIxIn0.eyJhdWQiOiIzIiwianRpIjoiMWJmNTcyMmNhN2U1OWFmNTg3M2MyYWU2MjZiOGU2N2NhNmU3Y2Q3Mjc4MDdlMzUxZmUxN2QxYWQ3MGMxNmQxNzA4NDQ4Njg2MTg0ZTZhYjEiLCJpYXQiOjE1NDg1ODA2MTYsIm5iZiI6MTU0ODU4MDYxNiwiZXhwIjoxNTgwMTE2NjE2LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.eVNUo-ncNxd5_rNXIXW8ggDG6J7YreiZWNGvIJC-o17c5QnRAfuK1ioU_ZMYltr3KfaMmojiwt16gq0hDsy1r0JMa69_YZ20l3UaSkRfy5acteI0tdh16iUEL-zuSNV4t5-AO8r9VI4XwhMlQ1slP68xWemafHuanXJkKgwBXBUSKYcft2z08qnhGP3OCjouoFoK-HSBnTUfB-_rzf1ZJCf8b5Tc3_8J3P1SuxS2P68VH23Ps52WN5SseXTFt-c-PM8SgqbkAe5J0RpT4SYE7MVjeDfHOQ5utOnZADBvUUY-z0kXxY6CXReHlnrv_EMJIF-1cpketlcMR0lqPAHeF4iZq4Usd6oI1VMxisgia5hA97TY03fCJWOGMLmV-NywmwYB_b3jMQeXo55nQpcd8vDV_n_53rQ9a1Py3cB2pDzDacyZwL1J0iq64DNED7nB0q1N5vIbQR6mussV16cwLKzih4DCO09-lSzqUEBSUZd_LMW5SjAEKYHa5-rNS31nHrFg9a6PpJwPAmbPHFpDjttEZsHWwYl6XLE0X4Em3oWhcYindx6G-61l65gEBJ39f6fwg33flJLOOs6PLDABb054g5FyZ3rrRc6VC7WrTruyu62b5dA-KG45nNRKamM6BLCd5Rfdjb_uzTMMDGRA2jHsGuOY0Dq92GctlYxbstA",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/locations",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Colectors Location",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA4NTE0MTViZDllYzU1NTY2OWUzNGIxYWFlNjMwYzk2ZWYzNDkxMjlhNTdmZmQyM2UzYTg4ZWJmMzE4MjYxYjk5OTZmMmYxOWUxZjZlMTc4In0.eyJhdWQiOiIxIiwianRpIjoiMDg1MTQxNWJkOWVjNTU1NjY5ZTM0YjFhYWU2MzBjOTZlZjM0OTEyOWE1N2ZmZDIzZTNhODhlYmYzMTgyNjFiOTk5NmYyZjE5ZTFmNmUxNzgiLCJpYXQiOjE1NTMxNDQ2MTgsIm5iZiI6MTU1MzE0NDYxOCwiZXhwIjoxNTg0NzY3MDE4LCJzdWIiOiIyMiIsInNjb3BlcyI6W119.A5Fh1SsaVREOpnUfmigdNGn6gGJe6C5GQZXCRGkSXV_sw3yWFeWzwJaHjKiaKMTAxGhGnMOBAt-dAWOsjNxPghq0lIYETM9mpd0Fkcp2mfJM-hp4jz6GNlSkj_kFzklL8El7cy6uJlqRD5DFCsagrJ3wns-ott3XjgqIBwowRhWx3kosJeJJc7jw9VrVQK8Hfg-bgAhVyEp8Q-0aaj3RSfQzU6QDiCzxUUtp7LMF7PTRD04E5kV_75ptkbMS2baDlSzAJLLBqvGxJ6gvphUFSsizwr42NrJutGyp55r1khRy0ZyTECisyM8Sm2rlDLKfDJsQ6_sTvMkn7ZYYmbqwvMe9EW7R8DKHZUcxg7Q_BgnCfUyfabA4TfSLfrOGVVrGgVc1Wfs-XKhvEUYDLKXW15cy_ofRSJbUNMfdNODiKwSNKAun5Egbj42IJqtF71_AH7C6V6I0bUA7XqVKGXvDkdtwvUkPx_aUYYnNBnuJB-82gVweZcVt_2Jxk9k6v3h0pzTj0gj-OKOLieUOE_IEsZb1Cm6nAWQL_eoTz8-bsvBLbs65fw_JSdQansum3H9P3aVxEY9yfcv3Rj6A_oK4swDsxzXzJx1DZaipBOi_3GydXg7z-fkC9QZYybghcBtjqNfcDmn14ioSqkUrObJQPyvU-pO_bfvbRIOtU3Co5MM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/location/allcollectors",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"location",
+								"allcollectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Costomers Location",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA4NTE0MTViZDllYzU1NTY2OWUzNGIxYWFlNjMwYzk2ZWYzNDkxMjlhNTdmZmQyM2UzYTg4ZWJmMzE4MjYxYjk5OTZmMmYxOWUxZjZlMTc4In0.eyJhdWQiOiIxIiwianRpIjoiMDg1MTQxNWJkOWVjNTU1NjY5ZTM0YjFhYWU2MzBjOTZlZjM0OTEyOWE1N2ZmZDIzZTNhODhlYmYzMTgyNjFiOTk5NmYyZjE5ZTFmNmUxNzgiLCJpYXQiOjE1NTMxNDQ2MTgsIm5iZiI6MTU1MzE0NDYxOCwiZXhwIjoxNTg0NzY3MDE4LCJzdWIiOiIyMiIsInNjb3BlcyI6W119.A5Fh1SsaVREOpnUfmigdNGn6gGJe6C5GQZXCRGkSXV_sw3yWFeWzwJaHjKiaKMTAxGhGnMOBAt-dAWOsjNxPghq0lIYETM9mpd0Fkcp2mfJM-hp4jz6GNlSkj_kFzklL8El7cy6uJlqRD5DFCsagrJ3wns-ott3XjgqIBwowRhWx3kosJeJJc7jw9VrVQK8Hfg-bgAhVyEp8Q-0aaj3RSfQzU6QDiCzxUUtp7LMF7PTRD04E5kV_75ptkbMS2baDlSzAJLLBqvGxJ6gvphUFSsizwr42NrJutGyp55r1khRy0ZyTECisyM8Sm2rlDLKfDJsQ6_sTvMkn7ZYYmbqwvMe9EW7R8DKHZUcxg7Q_BgnCfUyfabA4TfSLfrOGVVrGgVc1Wfs-XKhvEUYDLKXW15cy_ofRSJbUNMfdNODiKwSNKAun5Egbj42IJqtF71_AH7C6V6I0bUA7XqVKGXvDkdtwvUkPx_aUYYnNBnuJB-82gVweZcVt_2Jxk9k6v3h0pzTj0gj-OKOLieUOE_IEsZb1Cm6nAWQL_eoTz8-bsvBLbs65fw_JSdQansum3H9P3aVxEY9yfcv3Rj6A_oK4swDsxzXzJx1DZaipBOi_3GydXg7z-fkC9QZYybghcBtjqNfcDmn14ioSqkUrObJQPyvU-pO_bfvbRIOtU3Co5MM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://garbage.aladinlabs.com/api/location/allcustomers",
+							"protocol": "https",
+							"host": [
+								"garbage",
+								"aladinlabs",
+								"com"
+							],
+							"path": [
+								"api",
+								"location",
+								"allcustomers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
